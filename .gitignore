@@ -1,13 +1,4 @@
-.DS_Store
 node_modules
-.turbo
-*.log
-.next
+build
 dist
-dist-ssr
-*.local
-.env
-.cache
-server/dist
-public/dist
 .turbo

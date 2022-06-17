@@ -1,29 +1,25 @@
-# `turborepo` kitchen sink starter
+# Remix Turborepo Vercel
 
-This is an official Yarn v1 starter Turborepo with multiple meta-frameworks all working in harmony and sharing packages.
+Example of setting up a Remix app that will be deployed to Vercel from inside a Turborepo monorepo.
 
-## What's inside?
+## Preview
 
-This Turborepo includes the following packages and apps:
+Open this example on [CodeSandbox](https://codesandbox.com):
 
-### Apps and Packages
+<!-- TODO: update this link to the path for your example: -->
 
-- `api`: an [Express](https://expressjs.com/) server
-- `storefront`: a [Next.js](https://nextjs.org) app
-- `admin`: a [Vite](https://vitejs.dev/) single page app
-- `blog`: a [Remix](https://remix.run/) blog
-- `logger`: isomorphic logger (a small wrapper around console.log)
-- `ui`: a dummy React UI library (which contains a single `<CounterButton>` component)
-- `scripts`: Jest and eslint configurations
-- `tsconfig`: tsconfig.json;s used throughout the monorepo
+[![Open in CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/remix-run/remix/tree/main/examples/turborepo-vercel)
 
-Each package and app is 100% [TypeScript](https://www.typescriptlang.org/).
+## Example
 
-### Utilities
+What makes this different from deploying a normal remix app to Vercel,
+is that Vercel doesn't include files from the root `node_modules` when deploying the app.
+In order to work around this, we take the server build output from `remix` and
+bundle it using `rollup` so that all the necessary dependencies are present when deployed.
 
-This turborepo has some additional tools already setup for you:
+Another important thing to note is that the `ui` package needs to be built.
+Many turborepo examples don't build the `ui` package, but if we don't, remix is not able to use it.
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Jest](https://jestjs.io) test runner for all things JavaScript
-- [Prettier](https://prettier.io) for code formatting
+In order for this to work, your Vercel config should look like this:
+
+![Vercel project config](./vercel-project-config-example.png)
