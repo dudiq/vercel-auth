@@ -1,4 +1,5 @@
 {
+  "name": "remix-example-turborepo-vercel",
   "private": true,
   "packageManager": "yarn@1.22.18",
   "workspaces": [
@@ -6,36 +7,18 @@
     "packages/*"
   ],
   "scripts": {
+    "clean": "git clean -fdx -e .vercel .",
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "format": "prettier --write .",
     "lint": "turbo run lint"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "prettier": "^2.5.1",
-    "turbo": "latest"
+  "dependencies": {
+    "prettier": "^2.7.0",
+    "turbo": "^1.2.16"
   },
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=7.0.0"
-  },
-  "turbo": {
-    "pipeline": {
-      "build": {
-        "dependsOn": [
-          "^build"
-        ],
-        "outputs": [
-          "dist/**"
-        ]
-      },
-      "dev": {
-        "dependsOn": [
-          "^build"
-        ],
-        "cache": false
-      }
-    }
   }
 }
