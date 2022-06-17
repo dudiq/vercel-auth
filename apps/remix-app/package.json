@@ -6,7 +6,7 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build:copy": "copyfiles -V ./api/* ../../ && copyfiles -V ./public/* ../../ && copyfiles -V ./remix.config.js ../../ && copyfiles -V ./server.js ../../",
+    "build:copy": "copyfiles -V -a ./api/** ../../ && copyfiles -V -a ./public/** ../../ && copyfiles -V ./remix.config.js ../../ && copyfiles -V ./server.js ../../",
     "build": "remix build && npm run build:copy",
     "dev": "remix dev"
   },
