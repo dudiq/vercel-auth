@@ -6,7 +6,8 @@
   "license": "",
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
+    "build:copy": "copyfiles -V ./api/* ../../ && copyfiles -V ./public/* ../../ && copyfiles -V ./remix.config.js ../../ && copyfiles -V ./server.js ../../",
+    "build": "remix build && npm run build:copy",
     "dev": "remix dev"
   },
   "dependencies": {
@@ -23,6 +24,7 @@
     "@remix-run/serve": "^1.5.0-pre.1",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
+    "copyfiles": "^2.4.1",
     "typescript": "^4.7.3"
   },
   "engines": {
