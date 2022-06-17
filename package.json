@@ -22,6 +22,7 @@
     "npm": ">=7.0.0"
   },
   "devDependencies": {
-    "copyfiles": "^2.4.1"
+    "copyfiles": "^2.4.1",
+    "vercel": "^25.1.0"
   }
 }
