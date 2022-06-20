@@ -4,7 +4,7 @@
       "maxDuration": 5,
       "runtime": "@vercel/node@2.1.0"
     },
-    "render": {
+    "api/index.js": {
       "runtime": "@vercel/remix@1.0.1"
     }
   }
