@@ -24,7 +24,9 @@
     "@remix-run/serve": "^1.5.0-pre.1",
     "@types/react": "^18.0.12",
     "@types/react-dom": "^18.0.5",
+    "@vercel/remix": "^1.0.1",
     "copyfiles": "^2.4.1",
+    "remix": "^1.6.0",
     "typescript": "^4.7.3"
   },
   "engines": {

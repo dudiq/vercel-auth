@@ -1,7 +1,11 @@
 {
   "functions": {
     "api/hello.js": {
-      "maxDuration": 5
+      "maxDuration": 5,
+      "runtime": "@vercel/node@2.1.0"
+    },
+    "api/index.js": {
+      "runtime": "@vercel/remix@1.0.1"
     }
   }
 }
