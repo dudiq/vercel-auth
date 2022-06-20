@@ -7,7 +7,7 @@
   "sideEffects": false,
   "scripts": {
     "build:copy": "copyfiles -V -a ./app/** ../../ && copyfiles -V -a ./api/** ../../ && copyfiles -V -a ./public/** ../../ && copyfiles -V ./remix.config.js ../../ && copyfiles -V ./server.js ../../",
-    "build": "remix build && npm run build:copy",
+    "build": "remix build",
     "dev": "remix dev"
   },
   "dependencies": {
